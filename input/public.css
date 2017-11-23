@@ -1,0 +1,251 @@
+﻿@import "reset.css";
+/*@import "function.css";*/
+/*
+
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#99ffffff,endColorstr=#99ffffff)";  
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
+background:rgba(255,255,255,.8);
+
+
+filter:alpha(opacity=40); 针对 IE8 以及更早的版本 */
+
+.w{max-width: 1005px;width: 100%;margin: 0 auto;}
+body{
+	font-size: 100%;
+}
+
+.header{
+	padding: 25px 0;
+	background: #f7f7f5;
+	.brand{
+		img{
+			display: block;
+		}
+	}
+	.nav{
+		font-size: 0;
+		padding-top: 60px;
+		a{
+			display: inline-block;
+			margin: 0 5px 0 20px;
+			font-size: 16px;
+			line-height: 30px;
+			color: #867969;
+			transition: 0.3s color;
+			&:hover{
+				color:#000;
+			}
+		}
+	}
+	.login-box{
+		padding-top: 60px;
+		font-size: 16px;
+		color: #867969;
+		line-height: 30px;
+		border-bottom: 1px solid #dddbd6;
+		a{
+			transition: 0.3s color;
+			&:hover{
+				color: #000;
+			}
+		}
+	}
+	.search{
+		margin-top: 60px;
+		margin-right: 25px;
+		height: 30px;
+		line-height: 28px;
+		border: 1px solid #dcdbd9;
+		border-radius: 12px;
+		background: #fff;
+		box-sizing: border-box;
+		input{
+			float: left;
+			height: 100%;
+			background: none;
+			outline: none;
+			border-radius: 0;
+			border: none;
+		}
+		.input{
+			width: 80%;
+			box-sizing: border-box;
+			padding: 0 7px;
+		}
+		.button{
+			width: 20%;
+			background:url(../img/hico2.png) center center no-repeat;
+		}
+	}
+}
+
+.main{
+	.brand{
+		padding: 70px 0;
+		background: #373737;
+		h3{
+			font-size: 76px;
+			color: #f7f7f5;
+			text-align: center;
+			border-bottom: 1px dashed #404040;
+			font-weight: 100;
+			small{
+				padding: 10px 0 30px;
+				display: block;
+				font-size: 18px;
+				color: #f7f7f5;
+				text-transform: uppercase;
+			}
+		}
+		p{
+			padding-top: 20px;
+			text-align: center;
+			font-size: 16px;
+			color: #8c8c8c;
+			line-height: 28px;
+		}
+		.map{
+			padding-top: 70px;
+			img{
+				display: block;
+				margin: 0 auto;
+				max-width: 1069px;
+				width: 100%;
+			}
+		}
+	}
+	.store-display{
+		padding: 40px 0 50px;	
+		h3{
+			position: relative;
+			font-size: 55px;
+			color: #9c9b9b;
+			text-align: center;
+			&:after{
+				content:'';
+				position: absolute;
+				bottom: 0;
+				left: 48%;
+				right: 48%;
+				border-bottom: 1px solid #dfdfdf;
+			}
+			small{
+				display: block;
+				padding: 5px 0 10px;
+				font-size: 18px;
+				color: #adadad;
+				text-transform: uppercase;
+			}
+		}
+		.wrap{
+			position: relative;
+			padding-top: 15px;
+			&:after{
+				content:'';
+				position: absolute;
+				left: 50%;
+				top: 0;
+				bottom: 0;
+				border-left: 1px solid #dfdfdf;
+			};
+			.row{
+				position: relative;
+				overflow: hidden;
+				&:before{
+					content:'';
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					transform: translate(-50%, -50%);
+					background: #fff;
+					border: 1px solid #d4d4d4;
+					z-index: 1;
+				}
+				&.dotted:after{
+					content:'';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					width: 1px;
+					top: 60%;
+					background: linear-gradient(to bottom,#fff 0%,#fff 50%,#e1e1e1 51%,#e1e1e1 100%) left top/1px 8px repeat-y;
+					z-index: 1;
+				}
+				.left,
+				.right{
+					float: left;
+					width: 50%;
+					height: 162px;
+					font-size: 0;
+					i,.verm{
+						display: inline-block;
+						vertical-align: middle;
+					}
+					i{
+						width: 0;
+						height: 100%;
+					}
+					.verm{
+						padding: 0 5%;
+						h4{
+							font-size: 20px;
+							color: #6e6b6b;
+							small{
+								display: block;
+								padding: 5px 0 15px;
+								font-size: 12px;
+								color: #6e6b6b;
+								text-transform: uppercase;
+							}
+						}
+						p{
+							font-size: 14px;
+							color: #6e6b6b;
+							line-height: 1.5;
+						}
+					}
+					img{
+						display: block;
+						max-width: 274px;
+						width: 100%;
+					}
+				}
+				.left{
+					text-align: right;
+					&+.right{
+						text-align: left;
+					}
+				}
+				.right{
+					text-align: right;
+					&+.left{
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+.footer{
+	padding: 80px 0 120px;
+	background: #f0efed url(../img/hico13.png) center center no-repeat;
+	.row{
+		font-size: 0;
+		text-align: center;
+		.links-group{
+			display: inline-block;
+			font-size: 16px;
+			color: #867969;
+			line-height: 20px;
+			&+.links-group{
+				margin-left: 110px;
+			}
+			span{
+				padding: 0 10px;
+			}
+		}
+	}
+}
